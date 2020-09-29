@@ -9,7 +9,10 @@ stdenv.mkDerivation {
   name = "git-semver";
   src = ./.;
   dontBuild = true;
-  propagatedBuildInputs = [ git ];
+  propagatedBuildInputs = [
+    git
+    wrapProgram
+  ];
   installPhase = ''
     mkdir -p $out/bin/
     cp ./git-semver.sh $out/bin/git-semver.sh
