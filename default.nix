@@ -11,7 +11,7 @@ stdenv.mkDerivation {
   dontBuild = true;
   propagatedBuildInputs = [
     git
-    wrapProgram
+    makeWrapper
   ];
   installPhase = ''
     mkdir -p $out/bin/
