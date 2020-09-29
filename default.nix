@@ -15,8 +15,8 @@ stdenv.mkDerivation {
   ];
   installPhase = ''
     mkdir -p $out/bin/
-    cp ./git-semver.sh $out/bin/git-semver.sh
-    wrapProgram "$out/bin/git-semver.sh" \
+    cp ./git-semver.sh $out/bin/git-semver
+    wrapProgram "$out/bin/git-semver" \
       --set SYSTEM_CERTIFICATE_PATH "${cacert}/etc/ssl/certs"
   '';
 }
